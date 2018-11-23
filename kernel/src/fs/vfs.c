@@ -20,6 +20,7 @@
 #include "fs/vfs.h"
 #include "fs/devfs/devfs.h"   /* devfs_super_create */
 #include "fs/ext2/ext2.h"    /* ext2_super_create */
+#include "fs/fat/fat.h"       /* fat_super_create */
 #include "mm/slab.h"
 #include "kmalloc.h"
 #include "proc.h"
@@ -35,7 +36,8 @@
 
 static const struct vfs_type fs_list[FS_LIST_LEN] = {
     { "ext2", ext2_super_create },
-    { "dev",  devfs_super_create }
+    { "dev",  devfs_super_create },
+    { "fat",  fat_super_create }
 };
 
 
