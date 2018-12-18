@@ -32,7 +32,7 @@
 #include "kprintf.h"
 #endif
 
-#define FS_LIST_LEN 2
+#define FS_LIST_LEN 3
 
 static const struct vfs_type fs_list[FS_LIST_LEN] = {
     { "ext2", ext2_super_create },
